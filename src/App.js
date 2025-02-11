@@ -3,7 +3,7 @@ import { CalendarIcon, ChevronDownIcon, GlobeIcon, LuggageIcon, MapIcon, MenuIco
 
 // Function to fetch flight data
 const fetchFlights = async (originSkyId, destinationSkyId, originEntityId, destinationEntityId, date) => {
-  const apiUrl = `https://api.example.com/api/v1/flights/searchFlights`; // Replace with actual API URL
+  const apiUrl = ``; 
   const params = new URLSearchParams({
     originSkyId,
     destinationSkyId,
@@ -15,7 +15,7 @@ const fetchFlights = async (originSkyId, destinationSkyId, originEntityId, desti
   try {
     const response = await fetch(`${apiUrl}?${params}`);
     const data = await response.json();
-    return data.data; // Assuming 'data' contains the flight details
+    return data.data; 
   } catch (error) {
     console.error("Error fetching flights:", error);
     return [];
